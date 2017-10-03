@@ -24,13 +24,13 @@ namespace Encapsulation
 
             Console.WriteLine("Who are you searching for: ");
             string searchTerm = Console.ReadLine(); //user input 
-            string result = "The phonenumber is not in the phonebook"; //holds search result or default string
+            string searchResult = "The phonenumber is not in the phonebook"; //holds search result or default string
 
             foreach (KeyValuePair<string, long> item in phoneBook)
             {
                 if (searchTerm.ToLower() == item.Key.ToLower())
                 {
-                    result = (item.Key + "'s phone number is " + item.Value);
+                    searchResult = (item.Key + "'s phone number is " + item.Value);
                 }
                 else
                 {
@@ -38,7 +38,7 @@ namespace Encapsulation
                 }
             }
 
-            Console.WriteLine(result);
+            Console.WriteLine(searchResult);
             Console.ReadLine(); //keep the console open
         }
     }
